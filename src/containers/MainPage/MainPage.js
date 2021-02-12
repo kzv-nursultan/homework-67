@@ -22,6 +22,7 @@ const MainPage = () => {
     const deleteDigit = () => dispatch({type:'DELETE'})
 
     const refresh = () => dispatch({type:'REFRESH', value:''});
+
     
     if (inputted.length > 4) {
         setTimeout(()=>{
@@ -68,7 +69,7 @@ const MainPage = () => {
                fontSize:'30px',
                backgroundColor: inputted.length > 4 ? 'red' : 'white'
             }}>
-                 <div>{inputted}</div>
+                 <div>{state.stars}</div>
                 <div
                     style={{
                         display: inputted.length > 4 ? 'block' : 'none',
